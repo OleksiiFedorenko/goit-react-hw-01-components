@@ -1,38 +1,62 @@
 import PropTypes from 'prop-types';
 import {
-  ProfileCard,
-  ProfileDescription,
-  ProfileStats,
+  Card,
+  Description,
+  Image,
+  Name,
+  Tag,
+  Location,
+  Stats,
+  StatsItem,
+  Label,
+  Quantity,
 } from './Profile.styled';
 
-export const Profile = () => {
+export const Profile = ({
+  user: {
+    username,
+    tag,
+    location,
+    avatar,
+    stats: { followers, views, likes },
+  },
+}) => {
   return (
-    <ProfileCard>
-      <ProfileDescription>
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-          alt="User avatar"
-          class="avatar"
-        />
-        <p class="name">Petra Marica</p>
-        <p class="tag">@pmarica</p>
-        <p class="location">Salvador, Brasil</p>
-      </ProfileDescription>
-
-      <ProfileStats>
-        <li>
-          <span class="label">Followers</span>
-          <span class="quantity">1000</span>
-        </li>
-        <li>
-          <span class="label">Views</span>
-          <span class="quantity">2000</span>
-        </li>
-        <li>
-          <span class="label">Likes</span>
-          <span class="quantity">3000</span>
-        </li>
-      </ProfileStats>
-    </ProfileCard>
+    <Card>
+      <Description>
+        <Image src={avatar} alt="User avatar" />
+        <Name>{username}</Name>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </Description>
+      <Stats>
+        <StatsItem>
+          <Label>Followers</Label>
+          <Quantity>{followers}</Quantity>
+        </StatsItem>
+        <StatsItem>
+          <Label>Views</Label>
+          <Quantity>{views}</Quantity>
+        </StatsItem>
+        <StatsItem>
+          <Label>Likes</Label>
+          <Quantity>{likes}</Quantity>
+        </StatsItem>
+      </Stats>
+    </Card>
   );
+};
+
+Profile.propTypes = {
+  user: PropTypes.exact({
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    avatar: PropTypes.string,
+    stats: PropTypes.exact({
+      followers: PropTypes.number.isRequired,
+      views: PropTypes.number.isRequired,
+      likes: PropTypes.number.isRequired,
+    }),
+  }),
 };
