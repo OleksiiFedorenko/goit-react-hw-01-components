@@ -14,8 +14,8 @@ export const Item = styled.li`
 export const Online = styled.span`
   display: block;
   margin-left: 10px;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background-color: green;
 `;
@@ -23,8 +23,8 @@ export const Online = styled.span`
 export const Offline = styled.span`
   display: block;
   margin-left: 10px;
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background-color: red;
 `;

@@ -23,7 +23,7 @@ export const BodyRow = styled.tr`
 export const BodyCell = styled.td`
   text-align: center;
   padding: 10px;
-  border: 1px solid #9c9c9c;
+  border: 1px solid #c7c3c3;
 
   :first-of-type {
     text-transform: capitalize;

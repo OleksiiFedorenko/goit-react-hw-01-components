@@ -40,6 +40,7 @@ export const Stats = styled.ul`
   padding: 0;
   height: 60px;
   list-style: none;
+  background-color: #d4e4e7;
 `;
 
 export const StatsItem = styled.li`
@@ -47,9 +48,9 @@ export const StatsItem = styled.li`
   flex-direction: column;
   justify-content: space-evenly;
   width: 33.33%;
-  border-top: 1px solid gray;
+  border-top: 1px solid #c3c8c9;
   :not(:last-child) {
-    border-right: 1px solid gray;
+    border-right: 1px solid #c3c8c9;
   }
 `;
 export const Label = styled.span`

@@ -25,6 +25,10 @@ export const StatItem = styled.li`
   flex-direction: column;
   justify-content: space-evenly;
   width: 80px;
+  border-top: 1px solid #d9dedf;
+  :not(:last-child) {
+    border-right: 1px solid #d9dedf;
+  }
 `;
 
 export const Label = styled.span`
