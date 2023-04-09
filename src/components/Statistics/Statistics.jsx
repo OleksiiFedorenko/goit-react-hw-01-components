@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { getRandomColor } from 'utils/getRandomColor';
 import {
   Card,
   Title,
@@ -37,15 +38,3 @@ Statistics.propTypes = {
     })
   ),
 };
-
-function getRandomColor() {
-  return (
-    'hsl(' +
-    360 * Math.random() +
-    ',' +
-    (25 + 70 * Math.random()) +
-    '%,' +
-    (85 + 10 * Math.random()) +
-    '%)'
-  );
-}

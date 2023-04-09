@@ -51,7 +51,6 @@ export const StatsItem = styled.li`
   :not(:last-child) {
     border-right: 1px solid gray;
   }
-  /* border: 1px solid gray; */
 `;
 export const Label = styled.span`
   font-weight: 400;

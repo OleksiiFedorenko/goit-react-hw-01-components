@@ -3,7 +3,6 @@ import { FriendListItem } from 'components/FriendListItem/FriendListItem';
 import { Container } from './FriendList.styled';
 
 export const FriendList = ({ friends }) => {
-  console.log(friends);
   return (
     <Container>
       {friends.map(({ id, avatar, name, isOnline }) => (
